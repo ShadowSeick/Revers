@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #4169e1;
-    --secondary-color: #111;
+    --primary-color: #3d0859;
+    --secondary-color: #c71c81;
     --white-color: #dff3e4;
     --dark-color: #292929;
 }
@@ -12,7 +12,7 @@ body {
 
 nav, footer {
     color: var(--white-color);
-    background-color: var(--secondary-color);
+    background-color: var(--dark-color);
 }
 
 .sticky-nav {
@@ -41,7 +41,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checklist > li i{
-    color: rgb(74, 185, 74);
+    color: var(--secondary-color);
+}
+
+.btn-logo-color {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.btn-logo-color:hover {
+    color: var(--white-color);
+    box-shadow: 0.4em 0.4em var(--white-color);
 }
 
 code[class*="language-"],
