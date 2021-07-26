@@ -65,18 +65,44 @@
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8 order-last order-lg-first">
                 <pre class="line-numbers"><code class="language-javascript">
-                    //Call Hello World
-                    function helloWorld() {
-                    alert("Hello World");
+                    //start function
+                    function getText() {
+                        let textToReverse = document.getElementById("submitedText").value;
+                        textToReverse = textToReverse.toString();
+                        
+                        //Check if there is any text.
+                        if (textToReverse) {
+                            //Call reverseText
+                            let textReversed = reverseText(textToReverse);
+                            //Call displayText
+                            displayText(textReversed);
+                        }
+                        else {
+                            alert("You have to put text in it")
+                        }
+                    }
+
+                    //logic function
+                    function reverseText(text) {
+                        return text.split("").reverse().join("");
+                    }
+
+                    //view function
+                    function displayText(text) {
+                        //Display the card element by removing visually-hidden
+                        document.getElementById("alert").classList.remove("invisible");
+                        //Get element and insert the text
+                        let placeToDisplay = document.getElementById("result");
+                        placeToDisplay.innerHTML = `This is your text reversed: &lt;span class="fw-bold fs-4 text-dark"&gt;${text}&lt;/span&gt;`;
                     }
                     </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
+                <p>The Code is structured in three different functions. Divided this way because of the purpose of each function.</p>
                 <h5>REVERS</h5>
-                <p>Hello World is a function that displays an alert with a message of
-                    "Hello World"
+                <p>
+                    <!--Explication of the App-->
                 </p>
             </div>
         </div>

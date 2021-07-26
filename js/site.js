@@ -1,4 +1,4 @@
-sh//start function
+//start function
 function getText() {
 
     let textToReverse = document.getElementById("submitedText").value;
@@ -23,14 +23,14 @@ function reverseText(text) {
     return text.split("").reverse().join("");
 }
 
-//display function
+//view function
 function displayText(text) {
 
-    let placeToDisplay = document.getElementById("result");
-    
-    if (placeToDisplay.innerHTML){
-        placeToDisplay.innerHTML = "";
-    }
+    //Display the card element by removing visually-hidden
+    document.getElementById("alert").classList.remove("invisible");
 
-    placeToDisplay.innerHTML += `This is your text reversed: <span class="fw-bold fs-4">${text}</span>`;
+    //Get element and insert the text
+    let placeToDisplay = document.getElementById("result");
+
+    placeToDisplay.innerHTML = `This is your text reversed: <span class="fw-bold fs-4 text-dark">${text}</span>`;
 }

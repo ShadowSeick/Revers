@@ -57,13 +57,14 @@
 <main class="flex-shrink-0">
     <div class="container mt-5">
         <div class="row row-cols-1 row-cols-lg-2 g-3">
-            <div class="col col-lg-4 border-end border-1">
+            <div class="col col-lg-4">
                 <div>
-                    <h3>REVERS: A coding project</h3>
+                    <h1>REVERS: A coding project</h1>
                     <h4 class="lead mb-4">
-                        Introduce what the app will do.
+                        There and back again. A javascript coding exercise using arrays. Write a
+                        program that displays a string in reverse.
                     </h4>
-                    <h2 class="border-top pt-2">Instructions</h2>
+                    <h2 class="border-top pt-2"> Instructions</h2>
                     <p class="lead">Write in the box whatever you want and it will appear the text in reverse! For
                         your tongue twister or to show your friends how idiot you are!
                     </p>
@@ -71,19 +72,22 @@
                 
             </div>
             <div class="col col-lg-8">
-                <div>
-                    <label class="form-label fs-5">Enter a word, sentence or phrase</label>
-                    <textarea class="form-control" name="inputText" id="submitedText" cols="15" rows="4"></textarea>
-                </div>
-                <div class="d-flex justify-content-lg-end mt-2">
-                    <button class="btn btn-light btn-lg" id="btnSubmit" type="submit">Submit</button>
-                </div>
-                <div class="mt-4">
-                    <h1 class="display-4 border-bottom border-1">Results</h1>
-                    <p class="lead fs-4" id="result">
-                        <!--Here goes the results-->
-                    </p>
-                </div>
+                <h5 class="fs-5 border-bottom border-1">Enter a text to reverse</h5>
+                <form class="row row-cols-1 gx-3 gy-2">
+                    <div class="col">
+                        <input id="submitedText" type="text" class="form-control" placeholder="Enter A String" aria-label="Enter A String">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-light" id="btnSubmit" type="button">Reverse Me</button>
+                    </div>
+                    <div class="alert alert-danger mt-5 invisible fade show" id="alert">
+                        <h4 class="alert-heading">Your String is Reversed</h4>
+                        <hr>
+                        <p class="mb-0" id="result">
+                            <!--Here goes the results-->
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
